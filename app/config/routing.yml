@@ -1,0 +1,5 @@
+theodo_imagine_formation:
+    resource: "@TheodoImagineFormationBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
