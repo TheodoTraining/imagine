@@ -4,17 +4,15 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
-    <!--
     <parameters>
-        <parameter key="theodo_imagine_formation.example.class">Theodo\ImagineFormationBundle\Example</parameter>
+        <parameter key="theodo_imagine_formation.controller.demo.class">Theodo\ImagineFormationBundle\Controller\DemoController</parameter>
     </parameters>
 
     <services>
-        <service id="theodo_imagine_formation.example" class="%theodo_imagine_formation.example.class%">
-            <argument type="service" id="service_id" />
-            <argument>plain_value</argument>
-            <argument>%parameter_name%</argument>
+        <service id="theodo_imagine_formation.controller.demo" class="%theodo_imagine_formation.controller.demo.class%">
+            <!--<argument type="service" id="service_id" />-->
+            <!--<argument>plain_value</argument>-->
+            <!--<argument>%parameter_name%</argument>-->
         </service>
     </services>
-    -->
 </container>

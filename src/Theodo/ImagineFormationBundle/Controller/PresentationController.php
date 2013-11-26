@@ -5,15 +5,16 @@ namespace Theodo\ImagineFormationBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Symfony\Component\HttpFoundation\Request;
 
-class DefaultController extends Controller
+class PresentationtController extends Controller
 {
     /**
-     * @Route("/hello/{name}")
+     * @Route("/presentation")
      * @Template()
      */
-    public function indexAction($name)
+    public function indexAction(Request $request)
     {
-        return array('name' => $name);
+        return array();
     }
 }

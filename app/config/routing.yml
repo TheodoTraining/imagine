@@ -3,3 +3,6 @@ theodo_imagine_formation:
     type:     annotation
     prefix:   /
 
+theodo_imagine_formation_demo:
+    resource: "@TheodoImagineFormationBundle/Resources/config/routing.xml"
+    prefix:   /
