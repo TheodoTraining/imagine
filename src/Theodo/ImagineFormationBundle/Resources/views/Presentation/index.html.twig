@@ -1,1 +1,22 @@
-Début Présentation
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    Début Présentation
+    <br />
+    <img
+        src="{{ asset('bundles/theodoimagineformation/images/original.jpg') }}"
+        alt="Original picture"
+        width="200"
+        height="150"
+    />
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('bundles/theodoimagineformation/highlightjs/highlight.pack.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/theodoimagineformation/jquery/jquery.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/theodoimagineformation/impress.js/js/impress.js') }}" type="text/javascript"></script>
+{% endblock %}

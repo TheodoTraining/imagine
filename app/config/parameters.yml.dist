@@ -13,3 +13,10 @@ parameters:
 
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    web_dir:                    '%kernel.root_dir%/../web'
+    picture_path:               '%web_dir%/bundles/theodoimagineformation/images'
+    original_name:              'original.jpg'
+    destination_name:           'destination.png'
+    original_picture_path:      '%picture_path%/%original_name%'
+    destination_picture_path:   '%picture_path%/%destination_name%'

@@ -12,7 +12,8 @@
         <service id="theodo_imagine_formation.controller.demo" class="%theodo_imagine_formation.controller.demo.class%">
             <!--<argument type="service" id="service_id" />-->
             <!--<argument>plain_value</argument>-->
-            <!--<argument>%parameter_name%</argument>-->
+            <argument>%original_picture_path%</argument>
+            <argument>%destination_picture_path%</argument>
         </service>
     </services>
 </container>
