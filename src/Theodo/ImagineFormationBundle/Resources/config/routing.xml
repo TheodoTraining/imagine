@@ -5,12 +5,22 @@
         xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
     <route id="theodo_imagine_formation_demo_useTransformation" pattern="/demo/use-transformation">
-        <default key="_controller">theodo_imagine_formation.controller.demo:userTransformationAction</default>
+        <default key="_controller">theodo_imagine_formation.controller.demo:useTransformationAction</default>
         <requirement key="_method">GET</requirement>
     </route>
 
     <route id="theodo_imagine_formation_demo_useFilter" pattern="/demo/use-filter">
         <default key="_controller">theodo_imagine_formation.controller.demo:useFilterAction</default>
+        <requirement key="_method">GET</requirement>
+    </route>
+
+    <route id="theodo_imagine_formation_demo_displayOriginal" pattern="/demo/display-original">
+        <default key="_controller">theodo_imagine_formation.controller.demo:displayOriginalPictureAction</default>
+        <requirement key="_method">GET</requirement>
+    </route>
+
+    <route id="theodo_imagine_formation_demo_displayDestination" pattern="/demo/display-destination">
+        <default key="_controller">theodo_imagine_formation.controller.demo:displayDestinationPictureAction</default>
         <requirement key="_method">GET</requirement>
     </route>
 </routes>

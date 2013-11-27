@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <div id="sidebar">
+        {% block sidebar %}
+            {% include 'TheodoImagineFormationBundle:layout:sidebar.html.twig' %}
+        {% endblock %}
+    </div>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    <style type="text/css">
+        #sidebar {
+            float: left;
+            width: 200px;
+        }
+    </style>
+{% endblock %}

@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 class PresentationController extends Controller
 {
     /**
-     * @Route("/presentation")
+     * @Route("/presentation", name="theodo_imagine_formation_presentation")
      * @Template()
      */
     public function indexAction(Request $request)

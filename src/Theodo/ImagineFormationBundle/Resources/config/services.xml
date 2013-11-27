@@ -6,13 +6,26 @@
 
     <parameters>
         <parameter key="theodo_imagine_formation.controller.demo.class">Theodo\ImagineFormationBundle\Controller\DemoController</parameter>
+        <parameter key="theodo_imagine_formation.builder.transformation.class">Theodo\ImagineFormationBundle\Builder\TransformationBuilder</parameter>
+        <parameter key="theodo_imagine_formation.transformation.class">Imagine\Filter\Transformation</parameter>
     </parameters>
 
     <services>
-        <service id="theodo_imagine_formation.controller.demo" class="%theodo_imagine_formation.controller.demo.class%">
-            <!--<argument type="service" id="service_id" />-->
+        <service id="theodo_imagine_formation.controller.demo"
+                 class="%theodo_imagine_formation.controller.demo.class%"
+        >
             <!--<argument>plain_value</argument>-->
             <argument>%original_picture_path%</argument>
+            <argument>%destination_picture_path%</argument>
+            <argument type="service" id="theodo_imagine_formation.transformation" />
+            <argument type="service" id="templating" />
+        </service>
+
+        <service id="theodo_imagine_formation.transformation"
+                 class="%theodo_imagine_formation.transformation.class%"
+                 factory-class="%theodo_imagine_formation.builder.transformation.class%"
+                 factory-method="build"
+        >
             <argument>%destination_picture_path%</argument>
         </service>
     </services>

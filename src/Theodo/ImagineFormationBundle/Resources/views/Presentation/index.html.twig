@@ -1,6 +1,6 @@
-{% extends '::base.html.twig' %}
+{% extends 'TheodoImagineFormationBundle:layout:layout.html.twig' %}
 
-{% block body %}
+{% block content %}
     Début Présentation
     <br />
     <img
@@ -12,7 +12,7 @@
 {% endblock %}
 
 {% block stylesheets %}
-
+    {{ parent() }}
 {% endblock %}
 
 {% block javascripts %}
