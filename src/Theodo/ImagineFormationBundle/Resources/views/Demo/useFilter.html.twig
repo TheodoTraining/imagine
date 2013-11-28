@@ -4,20 +4,13 @@
     <pre>
         <code class="php">
 $imagine = new Imagine\Imagick\Imagine();
-$transformation = new Imagine\Filter\Transformation();
 
-$transformation
+$imagine->open($originalPath)
     ->strip()
     ->crop(new Imagine\Image\Point(15, 15), new Imagine\Image\Box(600, 450))
     ->thumbnail(new Imagine\Image\Box(400, 300), Imagine\Image\ImageInterface::THUMBNAIL_OUTBOUND)
     ->save($destinationPath)
 ;
-
-//Open original picture using Imagine
-$originalPicture = $imagine->open($originalPath);
-
-//Apply transformation to the picture
-$transformation->apply($originalPicture);
         </code>
     </pre>
     <br />

@@ -60,7 +60,15 @@ class DemoController
      */
     public function useFilterAction(Request $request)
     {
-        return new Response('Use Filters');
+        $this->imagine->open($this->originalPath)
+            ->strip()
+            ->crop(new Point(15, 15), new Box(600, 450))
+            ->thumbnail(new Box(400, 300), ImageInterface::THUMBNAIL_OUTBOUND)
+            ->save($this->destinationPath);
+
+        return $this->templating->renderResponse(
+            'TheodoImagineFormationBundle:Demo:useFilter.html.twig'
+        );
     }
 
     /**

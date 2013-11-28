@@ -1,0 +1,215 @@
+<div id="impress">
+    <div class="step slide" data-x="0" data-y="-1500">
+        <h1>Imagine PHP Library</h1>
+        <h2>Manipulating pictures simply with PHP</h2>
+    </div>
+    <div class="step slide" data-x="1500" data-y="-1500">
+        <h3>Plan</h3>
+        <ol>
+            <li>The main existing libraries</li>
+            <li>The Imagine library</li>
+            <li>The Imagine bundle</li>
+        </ol>
+    </div>
+    <div class="step slide" data-x="3000" data-y="-1500">
+        <h3>The main existing libraries</h3>
+        <ol>
+            <li>GD (actually GD2)</li>
+            <li>Gmagick (GraphicsMagick)</li>
+            <li>Imagick (ImageMagick)</li>
+            <li>(Cairo?)</li>
+        </ol>
+    </div>
+    <div class="step slide" data-x="4500" data-y="-1500">
+        <h3>GD: ID Card</h3>
+        <p>PHP Version: 4.3+</p>
+        <p>Current Version: 2.1.0</p>
+        <p>Documentation: <a href="http://www.php.net/manual/en/book.image.php">www.php.net</a></p>
+        <p>Repository: <a href="https://bitbucket.org/libgd/gd-libgd/overview">bitbucket</a></p>
+    </div>
+    <div class="step slide" data-x="6000" data-y="-1500">
+        <h3>GD: Pros and Cons</h3>
+        <ul class="pros">
+            <li>Most of the time shipped with a standard PHP installation</li>
+        </ul>
+        <ul class="cons">
+            <li>Not OOP</li>
+            <li>High memory footprint</li>
+        </ul>
+    </div>
+    <div class="step slide" data-x="7500" data-y="-1500">
+        <h3>GMagick: ID Card</h3>
+        <p>PHP Version: 5.1.3+</p>
+        <p>Current Version: 1.1.5RC1 (no stable)</p>
+        <p>Documentation: <a href="http://www.php.net/manual/en/book.gmagick.php">www.php.net</a></p>
+        <p>Homepage: <a href="http://pecl.php.net/package/gmagick">pecl.php.net</a></p>
+    </div>
+    <div class="step slide" data-x="9000" data-y="-1500">
+        <h3>GMagick: Good to know</h3>
+        <p>Based on <a href="http://www.graphicsmagick.org/">GraphicsMagick</a> API</p>
+        <p>Fork from ImageMagick in 2002</p>
+        <p>GraphicsMagick License : MIT</p>
+    </div>
+    <div class="step slide" data-x="10500" data-y="-1500">
+        <h3>GMagick: Pros and Cons</h3>
+        <ul class="pros">
+            <li>Almost OOP (3 classes)</li>
+            <li>“Smaller than Imagick (less dependencies)”</li>
+            <li>“More stable and secure than Imagick”</li>
+            <li>Stable API (BC and UC)</li>
+        </ul>
+        <ul class="cons">
+            <li>Google it (“PHP Gmagick pros and cons”) and find Imagick instead (“PHP Imagick pros and cons”)</li>
+        </ul>
+    </div>
+    <div class="step slide" data-x="12000" data-y="-1500">
+        <h3>IMagick: ID Card</h3>
+        <p>PHP Version: 5.1.3+</p>
+        <p>Current Version: 3.2.0b2 (3.1.2)</p>
+        <p>Documentation: <a href="http://www.php.net/manual/en/book.imagick.php">www.php.net</a></p>
+        <p>Homepage: <a href="http://pecl.php.net/package/imagick">pecl.php.net</a></p>
+    </div>
+    <div class="step slide" data-x="13500" data-y="-1500">
+        <h3>IMagick: Good to know</h3>
+        <p>Based on <a href="http://www.imagemagick.org/script/index.php">ImageMagick</a> API</p>
+        <p>ImageMagick License : Apache</p>
+    </div>
+    <div class="step slide" data-x="15000" data-y="-1500">
+        <h3>IMagick: Pros and Cons</h3>
+        <ul class="pros">
+            <li>Almost OOP (4 classes)</li>
+            <li>Easy to install</li>
+            <li>Popular</li>
+        </ul>
+        <ul class="cons">
+            <li></li>
+        </ul>
+    </div>
+    <div class="step slide" data-x="16500" data-y="-1500">
+        <h3>The Imagine library: ID Card</h3>
+        <p>PHP Version: 5.3+</p>
+        <p>Current Version: 0.5.0</p>
+        <p>Documentation: <a href="http://imagine.readthedocs.org/en/latest/">imagine.readthedocs.org</a></p>
+        <p>Repository: <a href="https://github.com/avalanche123/Imagine">github.com/avalanche123/Imagine</a></p>
+        <p>API: <a href="http://imagine.readthedocs.org/en/latest/_static/API/">imagine.readthedocs.org/API</a></p>
+    </div>
+    <div class="step slide" data-x="18000" data-y="-1500">
+        <h3>The Imagine library: Installation</h3>
+        <p>Installation using Composer:</p>
+        <pre>
+            <code class="json">
+{
+    "require": {
+        "imagine/imagine": "~0.5.0"
+    }
+}
+            </code>
+        </pre>
+    </div>
+    <div class="step slide" data-x="18000" data-y="0">
+        <h3>The Imagine library: Installation</h3>
+        <p>You could also add:</p>
+        <pre>
+            <code class="json">
+{
+    "require": {
+        "ext-imagick": "*"
+    }
+}
+            </code>
+        </pre>
+    </div>
+    <div class="step slide" data-x="19500" data-y="0">
+        <h3>The Imagine library: How it works</h3>
+        <p>Coordinates: starting at top left corner</p>
+        <p>Point class for coordinates</p>
+        <p>Box class for dimensions</p>
+    </div>
+    <div class="step slide" data-x="21000" data-y="0">
+        <h3>The Imagine library: How it works</h3>
+        <p>Palette</p>
+        <p>Layer</p>
+        <p>Effects <span style="font-size: 0.7em">(gamma, negative, grayscale, colorize, sharpen, blur)</span></p>
+        <p>Filters <span style="font-size: 0.7em">(modifications applied immediately)</span></p>
+        <p>Transformations <span style="font-size: 0.7em">(modifications stacked to be applied later)</span></p>
+    </div>
+    <div class="step slide" data-x="22500" data-y="0">
+        <h3>The Imagine library: Benefits</h3>
+        <ul class="pros">
+            <li>Really OOP</li>
+            <li>Abstract and Common implementation over the three most common image manipulation libraries</li>
+            <li>Good documentation with readable and simple examples</li>
+            <li>Clean Exceptions management</li>
+        </ul>
+    </div>
+    <div class="step slide" data-x="24000" data-y="0">
+        <!-- TODO: Too long -->
+        <h3>The Imagine library: Limits</h3>
+        <ul class="cons">
+            <li>Common implementation for all three libraries but support sometimes different (see documentation when wondering...)</li>
+            <li>Documentation not always synchronized with code</li>
+            <li>Provide abstraction but not that much… Since changing the image manipulation library require changes in the code</li>
+            <li>Thumbnail generation does not manage original picture smaller than destination thumbnail
+                <ul>
+                    <li>Resulting picture dimensions are smaller than required</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="step slide" data-x="25500" data-y="0">
+        <h3>The Imagine library: Example</h3>
+        <p>Check the nav bar</p>
+    </div>
+    <div class="step slide" data-x="27000" data-y="0">
+        <h3>The Imagine bundle: Installation</h3>
+        <pre>
+            <code class="bash">
+php composer.phar require "liip/imagine-bundle:dev-master"
+            </code>
+        </pre>
+    </div>
+    <div class="step slide" data-x="28500" data-y="0">
+        <!-- TODO: Too long -->
+        <h3>The Imagine bundle: What's in it?</h3>
+        <ul>
+            <li>Bundle semantic configuration</li>
+            <li>Twig filters to apply the defined filters to images</li>
+            <li>Caching</li>
+            <li>Controller as a service</li>
+            <li>Extensibility</li>
+            <li>Additional filters as “upscale”</li>
+            <li>Custom Loaders</li>
+            <li>Pretty good documentation</li>
+        </ul>
+    </div>
+    <div class="step slide" data-x="30000" data-y="0">
+        <!-- TODO: Too long and list not designed properly -->
+        <h3>The Imagine bundle: Basic workflow</h3>
+        <ol>
+            <li>Define the required filters in the configuration</li>
+            <li>In the Twig template use one of these filters on an image</li>
+            <li>
+                If first request:
+                <ol>
+                    <li>Find the original image using the Loader</li>
+                    <li>Apply filters to this image</li>
+                    <li>Store the modified image</li>
+                    <li>Return it</li>
+                </ol>
+            </li>
+            <li>
+                If not first request:
+                <ol>
+                    <li>Retrieve corresponding cached image</li>
+                    <li>Return it</li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+    <div class="step slide" data-x="31500" data-y="0">
+        <h1>And Voilà!</h1>
+    </div>
+    <div class="step slide" data-x="31500" data-y="-250" data-rotate="180" data-scale="6">
+        <h1 style="font-size:1.1em">Any (even stupid) question?</h1>
+    </div>
+</div>
