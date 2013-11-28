@@ -24,35 +24,30 @@ body {
 
     min-height: 740px;
 
-    background: rgb(215, 215, 215);
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
-    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background-color: #3F3F3F;
 
     -webkit-font-smoothing: antialiased;
 
     line-height: 1;
 }
 
-#sidebar {
+#header {
     float: left;
     width: 100%;
     height: 40px;
-    background-color: rgb(102, 102, 102);
     position: fixed;
+    background-color: #3F3F3F;
     top: 0px;
     left: 0px;
 }
 
-#sidebar > ul {
+#header > ul {
     list-style-type: none;
     padding: 0;
     margin: 0 0 0 15px;
 }
 
-#sidebar > ul > li {
+#header > ul > li {
     width: 300px;
     display: inline;
     margin-right: 15px;
@@ -61,11 +56,11 @@ body {
     line-height: 40px;
 }
 
-#sidebar > ul > li > a {
+#header a {
     text-decoration: none;
-    color: #FFF;
+    color: #CDCDCD;
 }
 
-#sidebar > ul > li > a:hover {
+#header a:hover {
     text-decoration: underline;
 }
