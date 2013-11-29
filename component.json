@@ -4,6 +4,7 @@
 
     "dependencies": {
         "impress.js": "latest",
-        "highlightjs": "latest"
+        "highlightjs": "latest",
+        "font-awesome": "latest"
     }
 }

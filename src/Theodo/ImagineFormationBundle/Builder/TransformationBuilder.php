@@ -19,8 +19,8 @@ class TransformationBuilder
         $transformation = new Transformation();
         $transformation
             ->strip()
-            ->crop(new Point(15, 15), new Box(600, 450))
-            ->thumbnail(new Box(400, 300), ImageInterface::THUMBNAIL_OUTBOUND)
+            ->crop(new Point(780, 40), new Box(630, 840))
+            ->thumbnail(new Box(315, 420), ImageInterface::THUMBNAIL_OUTBOUND)
             ->save($destinationPath);
 
         return $transformation;

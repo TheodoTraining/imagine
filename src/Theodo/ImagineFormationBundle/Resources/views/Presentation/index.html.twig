@@ -6,8 +6,10 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    <link href="{{ asset('bundles/theodoimagineformation/css/presentation.css') }}" rel="stylesheet" />
-    <link href="{{ asset('bundles/theodoimagineformation/highlightjs/styles/zenburn.css') }}" rel="stylesheet" />
+    {% stylesheets
+        '@TheodoImagineFormationBundle/Resources/public/less/presentation.less' %}
+        <link rel="stylesheet" href="{{ asset_url }}">
+    {% endstylesheets %}
 {% endblock %}
 
 {% block javascripts %}

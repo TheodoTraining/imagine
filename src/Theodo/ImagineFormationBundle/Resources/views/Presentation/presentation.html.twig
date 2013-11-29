@@ -4,7 +4,7 @@
         <h2>Manipulating pictures simply with PHP</h2>
     </div>
     <div class="step slide" data-x="1500" data-y="-1500">
-        <h3>Plan</h3>
+        <h3>30 minutes to cover:</h3>
         <ol>
             <li>The main existing libraries</li>
             <li>The Imagine library</li>
@@ -29,13 +29,9 @@
     </div>
     <div class="step slide" data-x="6000" data-y="-1500">
         <h3>GD: Pros and Cons</h3>
-        <ul class="pros">
-            <li>Most of the time shipped with a standard PHP installation</li>
-        </ul>
-        <ul class="cons">
-            <li>Not OOP</li>
-            <li>High memory footprint</li>
-        </ul>
+        <p><i class="fa fa-plus fa-lg"></i> Often shipped with a standard PHP installation</p>
+        <p><i class="fa fa-minus fa-lg"></i> Not OOP</p>
+        <p><i class="fa fa-minus fa-lg"></i> High memory footprint</p>
     </div>
     <div class="step slide" data-x="7500" data-y="-1500">
         <h3>GMagick: ID Card</h3>
@@ -52,15 +48,12 @@
     </div>
     <div class="step slide" data-x="10500" data-y="-1500">
         <h3>GMagick: Pros and Cons</h3>
-        <ul class="pros">
-            <li>Almost OOP (3 classes)</li>
-            <li>“Smaller than Imagick (less dependencies)”</li>
-            <li>“More stable and secure than Imagick”</li>
-            <li>Stable API (BC and UC)</li>
-        </ul>
-        <ul class="cons">
-            <li>Google it (“PHP Gmagick pros and cons”) and find Imagick instead (“PHP Imagick pros and cons”)</li>
-        </ul>
+        <p><i class="fa fa-plus fa-lg"></i> Almost OOP (3 classes)</p>
+        <p><i class="fa fa-plus fa-lg"></i> "Smaller than Imagick (less dependencies)"</p>
+        <p><i class="fa fa-plus fa-lg"></i> "More stable and secure than Imagick"</p>
+        <p><i class="fa fa-plus fa-lg"></i> Stable API (BC and UC)</p>
+        <p><i class="fa fa-minus fa-lg"></i> Google it and find Imagick instead<br />
+        <span class="small"> Type "PHP Gmagick pros and cons", Google rectifies with "PHP Imagick pros and cons"</p>
     </div>
     <div class="step slide" data-x="12000" data-y="-1500">
         <h3>IMagick: ID Card</h3>
@@ -76,14 +69,10 @@
     </div>
     <div class="step slide" data-x="15000" data-y="-1500">
         <h3>IMagick: Pros and Cons</h3>
-        <ul class="pros">
-            <li>Almost OOP (4 classes)</li>
-            <li>Easy to install</li>
-            <li>Popular</li>
-        </ul>
-        <ul class="cons">
-            <li></li>
-        </ul>
+        <p><i class="fa fa-plus fa-lg"></i> Almost OOP (4 classes)</p>
+        <p><i class="fa fa-plus fa-lg"></i> Easy to install</p>
+        <p><i class="fa fa-plus fa-lg"></i> Popular</p>
+        <p><i class="fa fa-minus fa-lg"></i> Did not find any...</p>
     </div>
     <div class="step slide" data-x="16500" data-y="-1500">
         <h3>The Imagine library: ID Card</h3>
@@ -131,39 +120,27 @@
     </div>
     <div class="step slide" data-x="22500" data-y="0">
         <h3>The Imagine library: Benefits</h3>
-        <ul class="pros">
-            <li>Really OOP</li>
-            <li>Abstract and Common implementation over the three most common image manipulation libraries</li>
-            <li>Good documentation with readable and simple examples</li>
-            <li>Clean Exceptions management</li>
-        </ul>
+        <p><i class="fa fa-plus fa-lg"></i> Really OOP</p>
+        <p><i class="fa fa-plus fa-lg"></i> Abstraction layer on the most known libraries</p>
+        <p><i class="fa fa-plus fa-lg"></i> Common implementation for these libraries</p>
+        <p><i class="fa fa-plus fa-lg"></i> Good documentation <span class="small">(with readable and simple examples)</span></p>
+        <p><i class="fa fa-plus fa-lg"></i> Clean Exceptions management</p>
     </div>
     <div class="step slide" data-x="24000" data-y="0">
-        <!-- TODO: Too long -->
         <h3>The Imagine library: Limits</h3>
-        <ul class="cons">
-            <li>Common implementation for all three libraries but support sometimes different (see documentation when wondering...)</li>
-            <li>Documentation not always synchronized with code</li>
-            <li>Provide abstraction but not that much… Since changing the image manipulation library require changes in the code</li>
-            <li>Thumbnail generation does not manage original picture smaller than destination thumbnail
-                <ul>
-                    <li>Resulting picture dimensions are smaller than required</li>
-                </ul>
-            </li>
-        </ul>
+        <p><i class="fa fa-minus fa-lg"></i> "Common implementation" but partial support<p>
+        <p class="small right">Most but not all methods are implemented for all libraries so refer to documentation</p>
+        <p><i class="fa fa-minus fa-lg"></i> Documentation not always synchronized with code</p>
+        <p><i class="fa fa-minus fa-lg"></i> Abstraction is relative<p>
+        <p class="small right">Changing library require changes in the code</p>
+        <p><i class="fa fa-minus fa-lg"></i> Thumbnail management with too small picture</p>
+        <p class="small right">Resulting picture dimensions are smaller than required</p>
     </div>
     <div class="step slide" data-x="25500" data-y="0">
         <h3>The Imagine library: Example</h3>
         <p>Check the nav bar</p>
     </div>
     <div class="step slide" data-x="27000" data-y="0">
-        <h3>The Imagine bundle: Installation</h3>
-        <pre>
-            <code class="bash">php composer.phar require "liip/imagine-bundle:dev-master"</code>
-        </pre>
-    </div>
-    <div class="step slide" data-x="28500" data-y="0">
-        <!-- TODO: Too long -->
         <h3>The Imagine bundle: What's in it?</h3>
         <ul>
             <li>Bundle semantic configuration</li>
@@ -171,39 +148,71 @@
             <li>Caching</li>
             <li>Controller as a service</li>
             <li>Extensibility</li>
-            <li>Additional filters as “upscale”</li>
-            <li>Custom Loaders</li>
-            <li>Pretty good documentation</li>
         </ul>
     </div>
-    <div class="step slide" data-x="30000" data-y="0">
-        <!-- TODO: Too long and list not designed properly -->
+    <div class="step slide" data-x="27000" data-y="1500">
+        <h3>The Imagine bundle: What's in it?</h3>
+        <ul>
+            <li>Custom Loaders</li>
+            <li>Pretty good documentation</li>
+            <li>Additional filters as "upscale"</li>
+        </ul>
+    </div>
+    <div class="step slide" data-x="28500" data-y="1500">
+        <h3>The Imagine bundle: Installation</h3>
+        <pre>
+            <code class="bash">php composer.phar require "liip/imagine-bundle:dev-master"</code>
+        </pre>
+        <pre>
+            <code class="yaml"># app/config/routing.yml
+_imagine:
+    resource: .
+    type:     imagine</code>
+        </pre>
+    </div>
+    <div class="step slide" data-x="30000" data-y="1500">
         <h3>The Imagine bundle: Basic workflow</h3>
-        <ol>
-            <li>Define the required filters in the configuration</li>
-            <li>In the Twig template use one of these filters on an image</li>
-            <li>
-                If first request:
-                <ol>
-                    <li>Find the original image using the Loader</li>
-                    <li>Apply filters to this image</li>
-                    <li>Store the modified image</li>
-                    <li>Return it</li>
-                </ol>
-            </li>
-            <li>
-                If not first request:
-                <ol>
-                    <li>Retrieve corresponding cached image</li>
-                    <li>Return it</li>
-                </ol>
-            </li>
+        <p>1. Define the required filters in the configuration</p>
+        <pre>
+            <code class="yaml"># app/config/config.yml
+liip_imagine:
+    filter_sets:
+        my_thumb:
+            quality: 75
+            filters:
+                thumbnail: { size: [120, 90], mode: outbound }
+            </code>
+        </pre>
+    </div>
+    <div class="step slide" data-x="30000" data-y="3000">
+        <h3>The Imagine bundle: Basic workflow</h3>
+        <p>2. Use provided filter in Twig template</p>
+        <pre>
+            <code class="twig">{{ '<img src="{{ \'path/to/image.jpg\' | imagine_filter(\'my_thumb\') }}\" />' | e('html') }}</code>
+        </pre>
+    </div>
+    <div class="step slide" data-x="30000" data-y="4500">
+        <h3>The Imagine bundle: Basic workflow</h3>
+        <p>3. If first request:</p>
+        <ol class="indent">
+            <li>Find the original image using the Loader</li>
+            <li>Apply filters to this image</li>
+            <li>Store the modified image</li>
+            <li>Return it</li>
         </ol>
     </div>
-    <div class="step slide" data-x="31500" data-y="0">
+    <div class="step slide" data-x="30000" data-y="6000">
+        <h3>The Imagine bundle: Basic workflow</h3>
+        <p>4. If not first request:</p>
+        <ol class="indent">
+            <li>Retrieve corresponding cached image</li>
+            <li>Return it</li>
+        </ol>
+    </div>
+    <div class="step slide" data-x="31500" data-y="6000">
         <h1>And Voilà!</h1>
     </div>
-    <div class="step slide" data-x="31500" data-y="-250" data-rotate="180" data-scale="6">
+    <div class="step slide" data-x="31500" data-y="5750" data-rotate="180" data-scale="6">
         <h1 style="font-size:1.1em">Any (even stupid) question?</h1>
     </div>
 </div>

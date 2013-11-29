@@ -8,8 +8,8 @@ $transformation = new Imagine\Filter\Transformation();
 
 $transformation
     ->strip()
-    ->crop(new Imagine\Image\Point(15, 15), new Imagine\Image\Box(600, 450))
-    ->thumbnail(new Imagine\Image\Box(400, 300), Imagine\Image\ImageInterface::THUMBNAIL_OUTBOUND)
+    ->crop(new Imagine\Image\Point(780, 40), new Imagine\Image\Box(630, 840))
+    ->thumbnail(new Imagine\Image\Box(315, 420), Imagine\Image\ImageInterface::THUMBNAIL_OUTBOUND)
     ->save($destinationPath)
 ;
 
@@ -28,7 +28,6 @@ $transformation->apply($originalPicture);
 
 {% block stylesheets %}
     {{ parent() }}
-    <link href="{{ asset('bundles/theodoimagineformation/highlightjs/styles/zenburn.css') }}" rel="stylesheet" />
     <style type="text/css">
         pre {
             margin-top: 80px;

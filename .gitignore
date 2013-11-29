@@ -10,4 +10,9 @@
 /bin/
 /composer.phar
 /.idea/*
-/src/Theodo/ImagineFormationBundle/Resources/public/js/*
+
+/src/Theodo/ImagineFormationBundle/Resources/public/font-awesome/*
+/src/Theodo/ImagineFormationBundle/Resources/public/highlightjs/*
+/src/Theodo/ImagineFormationBundle/Resources/public/impress.js/*
+/src/Theodo/ImagineFormationBundle/Resources/public/images/destination.png
+/web/css/*

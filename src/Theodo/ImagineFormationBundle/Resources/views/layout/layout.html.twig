@@ -13,5 +13,10 @@
 {% endblock %}
 
 {% block stylesheets %}
-    <link href="{{ asset('bundles/theodoimagineformation/css/main.css') }}" rel="stylesheet" />
+    <link href="{{ asset('bundles/theodoimagineformation/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('bundles/theodoimagineformation/highlightjs/styles/zenburn.css') }}" rel="stylesheet" />
+    {% stylesheets
+        '@TheodoImagineFormationBundle/Resources/public/less/main.less' %}
+        <link rel="stylesheet" href="{{ asset_url }}">
+    {% endstylesheets %}
 {% endblock %}
